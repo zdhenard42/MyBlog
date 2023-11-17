@@ -10,9 +10,11 @@ enableGitInfo = true
 enableRobotsTXT = true
 paginate = 50
 summaryLength = 0
+googleAnalytics = "G-XWGQEMWHN9"
 
 [permalinks]
   posts = "/p/:filename/"
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
+
