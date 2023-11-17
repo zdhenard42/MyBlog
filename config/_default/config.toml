@@ -4,7 +4,6 @@
 
 baseURL = "https://henard.xyz/"
 defaultContentLanguage = "en"
-theme = "congo"
 
 enableGitInfo = true
 
