@@ -57,7 +57,7 @@ Many times the redirect service would return a clean report when scanned even th
 Some Quishing samples redirected up to 6 times before reaching the destination address! 
   
 I found an API developed by [Redirect-Checker.net](https://api.redirect-checker.net) that would follow the redirects and return the destination address as well as the destination IP!  
-This proved to be very useful when perform analysis in later steps.
+This proved to be very useful when performing analysis in later steps.
 
 ## Peering into the Digital Abyss: Shodan Insights
 One analysis tool that I have come to love is Shodan. 
