@@ -26,7 +26,7 @@ Hoxhunt reports that 22% of phishing attacks used QR codes in October[^HoxHunt].
   
 I realized we're kinda in the wild west with this new threat. Not many shields or swords to fight this dragon. So, I rolled up my sleeves and thought, "Why not build something myself?"
 
-# QR Codes: The Double-Edged Sword of Digital Convenience and Security Risks
+## QR Codes: The Double-Edged Sword of Digital Convenience and Security Risks
 
 QR codes, or "Quick Response Codes", are now a staple in our digital life. 
 They encode data into a 2-D image that smartphones can easily read, storing information like URLs and Wi-Fi credentials.
@@ -40,7 +40,7 @@ Consider this scenario: You are at a hotel with poor cell service, but you urgen
 A QR code in the elevator allows you to connect to the hotel Wi-Fi, but instead actually connects you to an [Evil Twin](https://usa.kaspersky.com/resource-center/preemptive-safety/evil-twin-attacks) network set up by an attacker. 
 Now, your sensitive data is exposed without your knowledge.  
 
-# Decoding the Mystery: QR Code to URL Conversion
+## Decoding the Mystery: QR Code to URL Conversion
 
 I knew the first step in creating this platform would be decoding the QR code.  
   
@@ -49,7 +49,7 @@ After some testing, I was successfully able to send a QR code and receive back t
     
 After testing with samples of legitimate Quishing files, I realized that attackers had a trick up their sleeve to bypass initial reputation scans of the URL...  
 
-# Unraveling the Web: Tracking URL Redirects
+## Unraveling the Web: Tracking URL Redirects
 
 Attackers were using legitimate redirect services to hide the destination URL contained in the payload.  
   
@@ -59,7 +59,7 @@ Some Quishing samples redirected up to 6 times before reaching the destination a
 I found an API developed by [Redirect-Checker.net](https://api.redirect-checker.net) that would follow the redirects and return the destination address as well as the destination IP!  
 This proved to be very useful when perform analysis in later steps.
 
-# Peering into the Digital Abyss: Shodan Insights
+## Peering into the Digital Abyss: Shodan Insights
 One analysis tool that I have come to love is Shodan. 
 Shodan is a search engine that will gather information about most internet-connected devices and systems. 
   
@@ -69,7 +69,7 @@ Using [Shodan's API](https://developer.shodan.io/api) along with the destination
 - Country that the IP was located in
 - Operating System running on the destination IP
 
-# Guardians of the Net: AbuseIPDB Analysis
+## Guardians of the Net: AbuseIPDB Analysis
 Another common reputation database that I like to check against is AbuseIPDB. 
 AbuseIPDB also conveniently [offers an API](https://www.abuseipdb.com/api.html).  
     
@@ -80,7 +80,7 @@ Leveraging AbuseIPDB API, I am able to gather the following:
 - Number of times that IP has been reported
 - If the IP has ever been used as a Tor relay  
 
-# A Shield Against Digital Threats: VirusTotal's Role
+## A Shield Against Digital Threats: VirusTotal's Role
 Arguably one of the most common online analysis tools is VirusTotal.
 VirusTotal is an online service that analyzes suspicious files and URLs. 
   
@@ -91,7 +91,7 @@ I utilized this API to gather:
 - An analysis of the IP address
 - A WhoIs containing the domain registrar information  
 
-# The URL Sentinel: URLHaus API Integration
+## The URL Sentinel: URLHaus API Integration
 The last tool that I leveraged when analyzing these QR codes was URLHaus.  
 Prior to this project I was not very familiar with URLHaus. 
 After seeing how large of a database URLHaus offered, I knew this would be very useful for analysis. 
@@ -102,7 +102,7 @@ Here is what I am gathering from URLHaus:
 - A link to the URLHaus analysis of the queried URL
 - Tags associated with the queried URL
 
-# User Experience: Aggregating the data
+## User Experience: Aggregating the data
 After all the queries have been made, I needed a way to cleanly present this back to the user.  
 I never have been proficient in front-end design so my design process went something like this:  
 __Step 1:__ Format how the API response is displayed to the user  
@@ -113,7 +113,7 @@ After many iterations of redesigning the front-end experience, I finally settled
 Here is the output of Quishing sample scan:  
 ![QR Scan](QR-CodeScan.png)
 
-# Conclusion
+## Conclusion
 Gaining the ability to create my own API has introduced a completely new method to approaching projects in the future. 
 The customization that comes with having complete control over the data returned is invaluable.  
   
@@ -121,7 +121,7 @@ Now, users can scan QR codes on my platform with confidence, knowing they'll be 
 
 This project was a significant step in my journey as a developer and a valuable contribution to cybersecurity awareness. It's a testament to how innovative solutions can emerge from challenges, especially in the ever-evolving landscape of digital security.  
 
-# Recreate this yourself!
+## Recreate this yourself!
 The source code of my API is available on [Github](https://github.com/zdhenard42/QR-Analysis-API). 
 I would recommend utilizing [Cloudflare Workers](https://developers.cloudflare.com/workers/) when first creating an API due to the generous usage limits that come with the [free plan](https://developers.cloudflare.com/workers/platform/pricing/#workers).  
   
