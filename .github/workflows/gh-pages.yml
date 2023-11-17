@@ -1,19 +1,20 @@
+# .github/workflows/gh-pages.yml
+
 name: GitHub Pages
 
 on:
   push:
     branches:
-      - stable
+      - main
 
 jobs:
   build-deploy:
-    name: Build and Deploy
     runs-on: ubuntu-latest
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
         with:
           submodules: true
           fetch-depth: 0
@@ -24,12 +25,11 @@ jobs:
           hugo-version: "latest"
 
       - name: Build
-        working-directory: ./
-        run: hugo --minify --themesDir ../.. --buildDrafts --baseURL https://jpanther.github.io/congo/
+        run: hugo --minify
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.ref == 'refs/heads/stable' }}
+        if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
