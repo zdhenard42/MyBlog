@@ -21,11 +21,6 @@
   weight = 20
 
 [[main]]
-  name = "CV"
-  url = "https://henard.tech/Zachary_Henard.pdf"
-  weight = 40
-
-[[main]]
   identifier = "appearance"
   weight = 99
   [main.params]
