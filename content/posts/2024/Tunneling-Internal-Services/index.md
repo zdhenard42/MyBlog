@@ -1,5 +1,4 @@
 ---
-author: Zachary Henard
 date: '2024-01-18'
 summary: >
   A guide on setting up and managing Cloudflare tunnels to securely expose internal services using practical examples and security measures.

@@ -1,5 +1,4 @@
 ---
-author: Zachary Henard
 date: '2023-11-19'
 summary: >
   Learn how to secure Windows 11 to meet Department of Defense standards with this guide. From identifying vulnerabilities to applying fixes, elevate your cybersecurity skills and understanding.

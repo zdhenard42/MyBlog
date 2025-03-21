@@ -1,5 +1,4 @@
 ---
-author: Zachary Henard
 date: '2023-11-16'
 summary: >
   Exploring the creation of an API to counter "Quishing," this post highlights the use of advanced tools for analyzing and mitigating threats from malicious QR codes.
