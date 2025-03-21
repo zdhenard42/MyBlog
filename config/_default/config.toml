@@ -8,7 +8,6 @@ defaultContentLanguage = "en"
 enableGitInfo = true
 
 enableRobotsTXT = true
-paginate = 50
 summaryLength = 0
 googleAnalytics = "G-XWGQEMWHN9"
 
