@@ -11,12 +11,12 @@ copyright = "All content licensed [CC-BY-SA](https://creativecommons.org/license
   displayName = "EN"
   rtl = false
   dateFormat = "2 January 2006"
-  description = "Cybersecurity Student & DIY Tech Fanatic :closed_lock_with_key:"
+  description = "Passionate Computer Scientist & DIY Tech Fanatic :closed_lock_with_key:"
 
 [author]
   name = "Zachary Henard"
   image = "zachary_avatar.png"
-  headline = "Cybersecurity Student & DIY Tech Fanatic :closed_lock_with_key:"
+  headline = "Passionate Computer Scientist & DIY Tech Fanatic :closed_lock_with_key:"
   bio = "I enjoy exploring all aspects of IT and sharing what I learn with others."
   links = [
     { email = "mailto:zachary@henard.tech" },
